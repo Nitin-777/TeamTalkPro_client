@@ -1,0 +1,56 @@
+/* GroupCreationModal.css */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(33,36,61,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 40px;
+  min-width: 340px;
+  box-shadow: 0 8px 32px rgba(33,36,61,0.13);
+}
+.modal h2 {
+  margin-bottom: 18px;
+  color: #232744;
+}
+.user-list {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 18px;
+}
+.user-checkbox {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: #232744;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.cancel {
+  background: #e0e0e0;
+  color: #232744;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+.create {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+.create:hover {
+  background: #574fd6;
+}
