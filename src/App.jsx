@@ -10,14 +10,14 @@ const App = () => {
 
   const dummyChats = [
     { id: 1, name: "General", isGroup: true },
-    { id: 2, name: "John Doe", isGroup: false },
+    { id: 2, name: "Nitin", isGroup: false },
   ];
 
   const dummyMessages = [
     {
       id: 1,
       senderId: 1,
-      senderName: "Alice",
+      senderName: "Mohan",
       timestamp: "10:30 AM",
       content: "Hey there!",
     },
@@ -31,14 +31,14 @@ const App = () => {
   ];
 
   const dummyMembers = [
-    { id: 1, username: "Alice", role: "admin" },
-    { id: 2, username: "Bob", role: "member" },
+    { id: 1, username: "Mohan", role: "admin" },
+    { id: 2, username: "Ramesh", role: "member" },
   ];
 
   const dummyUsers = [
-    { id: 1, username: "Alice" },
-    { id: 2, username: "Bob" },
-    { id: 3, username: "Charlie" },
+    { id: 1, username: "Mohan" },
+    { id: 2, username: "Nitin" },
+    { id: 3, username: "Ramesh" },
   ];
 
   const selectedChat = dummyChats.find((chat) => chat.id === selectedChatId);
