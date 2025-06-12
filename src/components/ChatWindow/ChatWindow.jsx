@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./ChatWindow.css";
 
-const ChatWindow = ({ chat, messages, members, currentUserId, onSendMessage }) => {
+const ChatWindow = ({ chat, messages, members, currentUserId, onSendMessage, onCreateGroup }) => {
   const [content, setContent] = useState("");
   const messagesEndRef = useRef(null);
 
@@ -35,6 +35,11 @@ const ChatWindow = ({ chat, messages, members, currentUserId, onSendMessage }) =
             </div>
           )}
         </div>
+        {!chat.isGroup && (
+          <button className="create-group-btn" onClick={onCreateGroup}>
+            Create Group
+          </button>
+        )}
       </header>
       <div className="chat-messages">
         {messages.map(msg => (

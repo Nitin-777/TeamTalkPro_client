@@ -1,4 +1,3 @@
-// GroupCreationModal.jsx
 import React, { useState } from "react";
 import "./GroupCreationModal.css";
 
@@ -6,13 +5,13 @@ const GroupCreationModal = ({ users, onCreate, onClose }) => {
   const [name, setName] = useState("");
   const [selected, setSelected] = useState([]);
 
-  const toggleUser = id => {
+  const toggleUser = (id) => {
     setSelected(prev =>
       prev.includes(id) ? prev.filter(uid => uid !== id) : [...prev, id]
     );
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (name && selected.length) {
       onCreate({ name, memberIds: selected });
@@ -28,7 +27,7 @@ const GroupCreationModal = ({ users, onCreate, onClose }) => {
             type="text"
             placeholder="Group Name"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <div className="user-list">
